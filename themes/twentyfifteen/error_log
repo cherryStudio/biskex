@@ -1,0 +1,4 @@
+[03-Mar-2017 22:00:12 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biskex/public_html/wp-content/themes/twentyfifteen/404.php on line 10
+[04-Mar-2017 04:07:08 UTC] PHP Fatal error:  Call to undefined function get_template_directory() in /home/biskex/public_html/wp-content/themes/twentyfifteen/functions.php on line 41
+[04-Apr-2017 21:15:11 UTC] PHP Fatal error:  Call to undefined function get_template_directory() in /home/biskex/public_html/wp-content/themes/twentyfifteen/functions.php on line 41
+[04-Apr-2017 22:54:56 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/biskex/public_html/wp-content/themes/twentyfifteen/404.php on line 10
