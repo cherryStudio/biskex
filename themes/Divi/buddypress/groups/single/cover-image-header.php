@@ -17,6 +17,14 @@ do_action( 'bp_before_group_header' ); ?>
 	<a id="header-cover-image" href="<?php echo esc_url( bp_get_group_permalink() ); ?>"></a>
 
 	<div id="item-header-cover-image">
+		<?php // Get the Cover Image
+		$group_cover_image_url = bp_attachments_get_attachment('url', array(
+			'object_dir' => 'groups',
+			'item_id' => bp_get_group_id(),
+		));
+	?>
+
+	<img src="<?php echo $group_cover_image_url; ?>">
     <h2><?php echo esc_attr( bp_get_group_name() ); ?></h2>
 		<?php if ( ! bp_disable_group_avatar_uploads() ) : ?>
 			<div id="item-header-avatar">
