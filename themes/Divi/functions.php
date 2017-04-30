@@ -80,6 +80,13 @@ function et_setup_theme() {
 }
 add_action( 'after_setup_theme', 'et_setup_theme' );
 
+function divi_xprofile_cover_image( $settings = array() ) {
+    $settings['default_cover'] = 'http://site.url/to/your/default_cover_image.jpg';
+
+    return $settings;
+}
+add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'divi_xprofile_cover_image', 10, 1 );
+
 function et_theme_epanel_reminder(){
 	global $shortname, $themename;
 
