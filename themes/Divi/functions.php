@@ -80,13 +80,6 @@ function et_setup_theme() {
 }
 add_action( 'after_setup_theme', 'et_setup_theme' );
 
-function divi_xprofile_cover_image( $settings = array() ) {
-    $settings['default_cover'] = 'http://site.url/to/your/default_cover_image.jpg';
-
-    return $settings;
-}
-add_filter( 'bp_before_groups_cover_image_settings_parse_args', 'divi_xprofile_cover_image', 10, 1 );
-
 function et_theme_epanel_reminder(){
 	global $shortname, $themename;
 
@@ -8725,6 +8718,24 @@ function et_divi_customizer_link() {
 	}
 }
 add_action( 'customize_controls_print_footer_scripts', 'et_divi_customizer_link' );
+
+function wpurp_custom_template( $content, $recipe )
+{
+	ob_start();
+	?>
+
+	<div class="recipe">
+		<h2><?php echo $recipe->title(); ?></h2>
+		<?php echo $recipe->description(); ?>
+	</div>
+
+	<?php
+    $output = ob_get_contents();
+    ob_end_clean();
+
+	return $output;
+}
+add_filter( 'wpurp_output_recipe', 'wpurp_custom_template', 10, 2 );
 
 /**
  * Added body class to make it possible to identify the Divi theme on frontend
