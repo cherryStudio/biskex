@@ -8721,20 +8721,12 @@ add_action( 'customize_controls_print_footer_scripts', 'et_divi_customizer_link'
 
 function wpurp_custom_template( $content, $recipe )
 {
-	ob_start();
-	?>
+		ob_start();
+		include('includes/recipes/recipe.php');
+		$output = ob_get_contents();
+		ob_end_clean();
 
-	<div class="recipe">
-		<h2><?php echo $recipe->title(); ?></h2>
-		<?php echo $recipe->description(); ?>
-	</div>
-
-	<?php
-    $output = ob_get_contents();
-			include( $template_directory . 'recipe.php' );
-    ob_end_clean();
-
-	return $output;
+		return $output;
 }
 add_filter( 'wpurp_output_recipe', 'wpurp_custom_template', 10, 2 );
 
