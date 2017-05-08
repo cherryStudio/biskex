@@ -8731,7 +8731,7 @@ function wpurp_custom_template( $content, $recipe )
 
 	<?php
     $output = ob_get_contents();
-			require_once( $template_directory . 'recipe.php' );
+			include( $template_directory . 'recipe.php' );
     ob_end_clean();
 
 	return $output;
