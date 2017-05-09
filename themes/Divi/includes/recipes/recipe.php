@@ -28,7 +28,7 @@
       <div class="et_pb_row et_pb_row_0 et_pb_row_4col">
          <div class="et_pb_column et_pb_column_1_4  et_pb_column_0">
             <div class="et_pb_text et_pb_module et_pb_bg_layout_dark et_pb_text_align_center  et_pb_text_0">
-               <i class="wp-svg-pie pie"></i><?php echo 8 portions ?>
+               <i class="wp-svg-pie pie"></i><?php echo $recipe->servings(); ?>
                <p></p>
             </div>
             <!-- .et_pb_text -->
