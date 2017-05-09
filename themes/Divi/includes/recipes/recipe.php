@@ -1,15 +1,4 @@
-<div class="recipe">
-   <div class="wpurp-container">
-      <?php
-         $print_button = new WPURP_Template_Recipe_Print_Button();
-         echo $print_button->output( $recipe );
-         
-         $star_rating = new WPURP_Template_Recipe_Stars();
-         echo $star_rating->output( $recipe );
-         ?>
-   </div>
-</div>
-<div class="entry-content">
+<div class="entry-content recipe">
    <div class="et_pb_section et_pb_fullwidth_section  et_pb_section_0 et_section_regular">
       <section class="et_pb_fullwidth_header et_pb_module et_pb_bg_layout_dark et_pb_text_align_left  et_pb_fullwidth_header_0">
          <div class="et_pb_fullwidth_header_container left">
@@ -25,10 +14,10 @@
    </div>
    <!-- .et_pb_section -->
    <div class="et_pb_section  et_pb_section_1 et_section_regular">
-      <div class="et_pb_row et_pb_row_0 et_pb_row_4col">
+      <div class="et_pb_row et_pb_row_0 et_pb_row_4col info-bar">
          <div class="et_pb_column et_pb_column_1_4  et_pb_column_0">
             <div class="et_pb_text et_pb_module et_pb_bg_layout_dark et_pb_text_align_center  et_pb_text_0">
-               <i class="wp-svg-pie pie"></i><?php echo $recipe->servings(); ?>
+               <i class="wp-svg-pie pie"></i><?php echo $recipe->servings_normalized(); ?>
                <p></p>
             </div>
             <!-- .et_pb_text -->
