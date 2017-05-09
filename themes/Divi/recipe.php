@@ -11,7 +11,7 @@
   <h2><?php echo $recipe->title(); ?></h2>
   <?php echo $recipe->description(); ?>
 
-  <h3>Ingredients</h3>
+  <h3><?php _e( 'Ingredients', 'wp-ultimate-recipe' );?></h3>
   <?php
     $ingredient_list = new WPURP_Template_Recipe_Ingredients();
     echo $ingredient_list->output( $recipe );
