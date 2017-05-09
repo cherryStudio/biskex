@@ -54,7 +54,7 @@
       <div class=" et_pb_row et_pb_row_1">
          <div class="et_pb_column et_pb_column_1_2  et_pb_column_4">
             <div class="et_pb_module et-waypoint et_pb_image et_pb_animation_fade_in et_pb_image_0 et_always_center_on_mobile et-animated">
-               <img src="https://i2.wp.com/biskex.com/wp-content/uploads/2017/02/dessert_cups.jpg?zoom=1.25&amp;w=1080" alt="" width="372" height="248" src-orig="https://i2.wp.com/biskex.com/wp-content/uploads/2017/02/dessert_cups.jpg?w=1080" scale="1.25">
+               <img src="<?php echo $recipe->featured_image_url(); ?>" alt="" width="372" height="248" src-orig="<?php echo $recipe->featured_image_url(); ?>" scale="1.25">
             </div>
          </div>
          <!-- .et_pb_column -->
